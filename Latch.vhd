@@ -14,7 +14,7 @@ begin
 
 flipflop: process (CLK,D)
     begin
-        if CLK="1" then
+        if (CLK'event and CLK="1") then
             Q <= D;
             Qn <= not D;
         end if;

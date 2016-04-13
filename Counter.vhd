@@ -7,8 +7,8 @@ end Counter;
 
 architecture Counter is
 begin
+    signal count: bit_vector(3 downto 0) = "0000";
     process(CLK)
-    signal count: bit_vector(3 downto 0) := "0000";
     begin
         
         if( CLK'event and CLK = "1") then
